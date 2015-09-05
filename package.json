@@ -2,7 +2,7 @@
   "name": "d-util",
   "version": "0.0.0",
   "description": "Data structures and algorithms.",
-  "main": "src/util.js",
+  "main": "dist/d-util.js",
   "scripts": {
     "build": "rm -rf dist && broccoli build dist",
     "test": "echo \"Error: no test specified\" && exit 1"

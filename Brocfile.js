@@ -1,5 +1,6 @@
 // build modules
-var funnel = require('broccoli-funnel'),
+var pkg = require('./package.json'),
+  funnel = require('broccoli-funnel'),
   concat = require('broccoli-concat'),
   mergeTrees = require('broccoli-merge-trees'),
   babel = require('broccoli-babel-transpiler');
@@ -13,7 +14,7 @@ appJs = babel(appJs, {
 });
 appJs = concat(appJs, {
   inputFiles: ['**/*.js'],
-  outputFile: '/d-util.js'
+  outputFile: '/' + pkg.name + '.js'
 });
 
 module.exports = appJs;
