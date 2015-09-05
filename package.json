@@ -33,6 +33,6 @@
     "broccoli-merge-trees": "^0.2.3",
     "chai": "^3.2.0",
     "mocha": "^2.3.0",
-    "mocha-jshint": "^2.2.3"
+    "mocha-eslint": "^1.0.0"
   }
 }

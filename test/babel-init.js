@@ -1,8 +1,5 @@
-(function() {
-  "use strict";
+var babel = require('babel/register');
 
-  var babel = require('babel/register');
-  babel({
-    stage: 0
-  });
-})();
+babel({
+  stage: 0
+});

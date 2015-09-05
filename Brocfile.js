@@ -2,7 +2,7 @@
 var pkg = require('./package.json'),
   funnel = require('broccoli-funnel'),
   concat = require('broccoli-concat'),
-  mergeTrees = require('broccoli-merge-trees'),
+//  mergeTrees = require('broccoli-merge-trees'),
   babel = require('broccoli-babel-transpiler');
 
 var appJs = funnel('src', {

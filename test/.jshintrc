@@ -1,4 +1,0 @@
-{
-  "esnext": true,
-  "expr": true // removed to stop complaining about chai expect statements
-}
