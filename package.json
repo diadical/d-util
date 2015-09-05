@@ -5,7 +5,7 @@
   "main": "dist/d-util.js",
   "scripts": {
     "build": "rm -rf dist && broccoli build dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,14 +20,19 @@
   ],
   "author": "Diwas Adhikary",
   "license": "MIT",
+  "homepage": "https://github.com/diadical/d-util",
   "bugs": {
     "url": "https://github.com/diadical/d-util/issues"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
     "broccoli": "^0.16.8",
     "broccoli-babel-transpiler": "^5.4.5",
     "broccoli-concat": "0.0.13",
     "broccoli-funnel": "^0.2.8",
-    "broccoli-merge-trees": "^0.2.3"
+    "broccoli-merge-trees": "^0.2.3",
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0",
+    "mocha-jshint": "^2.2.3"
   }
 }

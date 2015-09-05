@@ -1,0 +1,2 @@
+test/unit/**/*.spec.js
+--require=test/babel-init
