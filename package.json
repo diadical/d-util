@@ -1,0 +1,33 @@
+{
+  "name": "d-util",
+  "version": "0.0.0",
+  "description": "Data structures and algorithms.",
+  "main": "src/util.js",
+  "scripts": {
+    "build": "rm -rf dist && broccoli build dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diadical/d-util.git"
+  },
+  "keywords": [
+    "javascript",
+    "data structures",
+    "algorithms",
+    "library",
+    "computer science"
+  ],
+  "author": "Diwas Adhikary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diadical/d-util/issues"
+  },
+  "devDependencies": {
+    "broccoli": "^0.16.8",
+    "broccoli-babel-transpiler": "^5.4.5",
+    "broccoli-concat": "0.0.13",
+    "broccoli-funnel": "^0.2.8",
+    "broccoli-merge-trees": "^0.2.3"
+  }
+}
