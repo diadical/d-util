@@ -1,4 +1,5 @@
+import KeyValuePair from './util/KeyValuePair';
 
 export default {
-  // TODO
+  KeyValuePair
 };
