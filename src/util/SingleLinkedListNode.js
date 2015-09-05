@@ -22,7 +22,7 @@ class SingleLinkedListNode {
       this._next = node;
     }
     else {
-      throw new TypeError('next node must be a SingleLinkedListNode');
+      throw new TypeError('next node must be a SingleLinkedListNode or null');
     }
   }
 }
