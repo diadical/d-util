@@ -5,6 +5,7 @@
   "main": "dist/d-util.js",
   "scripts": {
     "build": "rm -rf dist && broccoli build dist",
+    "lint": "eslint .",
     "test": "mocha"
   },
   "repository": {
