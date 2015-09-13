@@ -5,6 +5,7 @@ describe('SingleLinkedListNode class', () => {
   let value = 'value';
 
   describe('instantiation', () => {
+
     it('works with value supplied', () => {
       var node = new SingleLinkedListNode(value);
 
@@ -15,6 +16,7 @@ describe('SingleLinkedListNode class', () => {
     it('throws an error when no parameters supplied', () => {
       expect(() => new SingleLinkedListNode()).to.throw(Error);
     });
+
   });
 
   describe('properties', () => {
@@ -27,6 +29,7 @@ describe('SingleLinkedListNode class', () => {
     });
 
     describe('.value', () => {
+
       it('can get', () => {
         expect(obj.value).to.equal(value);
       });
@@ -34,9 +37,11 @@ describe('SingleLinkedListNode class', () => {
       it('cannot set', () => {
         expect(() => obj.value = null).to.throw(TypeError);
       });
+
     });
 
     describe('.next', () => {
+
       it('can get', () => {
         expect(obj.next).to.equal(null);
       });
@@ -57,6 +62,9 @@ describe('SingleLinkedListNode class', () => {
       it('throws error when set to invalid type', () => {
         expect(() => obj.next = 1).to.throw(TypeError);
       });
+
     });
+
   });
+
 });

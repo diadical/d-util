@@ -1,16 +1,19 @@
 import { expect } from 'chai';
 import LinkedListQueue from '../../../src/util/LinkedListQueue';
 
-describe('LinkedListQueue class', () => {
+describe('LinkedListQueue class', function() {
 
-  describe('instantiation', () => {
+  describe('instantiation', function() {
+
     it('works with no arguments', function() {
       let obj = new LinkedListQueue();
       expect(obj.first).to.be.undefined;
     });
+
   });
 
-  describe('property constraints', () => {
+  describe('property constraints', function() {
+
     beforeEach(function() {
       this.obj = new LinkedListQueue();
     });
@@ -18,9 +21,11 @@ describe('LinkedListQueue class', () => {
     it('cannot set size', function() {
       expect(() => this.obj.size = null).to.throw(TypeError);
     });
+
   });
 
-  describe('functionality', () => {
+  describe('functionality', function() {
+
     beforeEach(function() {
       this.obj = new LinkedListQueue();
     });

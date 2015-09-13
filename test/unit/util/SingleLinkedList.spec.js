@@ -1,16 +1,19 @@
 import { expect } from 'chai';
 import SingleLinkedList from '../../../src/util/SingleLinkedList';
 
-describe('SingleLinkedList class', () => {
+describe('SingleLinkedList class', function() {
 
-  describe('instantiation', () => {
+  describe('instantiation', function() {
+
     it('works with no arguments', function() {
       let list = new SingleLinkedList();
       expect(list.first).to.be.undefined;
     });
+
   });
 
-  describe('property constraints', () => {
+  describe('property constraints', function() {
+
     beforeEach(function() {
       this.obj = new SingleLinkedList();
     });
@@ -22,14 +25,17 @@ describe('SingleLinkedList class', () => {
     it('cannot set .size', function() {
       expect(() => this.obj.size = null).to.throw(TypeError);
     });
+
   });
 
-  describe('functionality', () => {
+  describe('functionality', function() {
+
     beforeEach(function() {
       this.obj = new SingleLinkedList();
     });
 
-    describe('adding', () => {
+    describe('adding', function() {
+
       it('can add item to front', function() {
         let value = 'val1';
         this.obj.addFirst(value);
@@ -61,9 +67,11 @@ describe('SingleLinkedList class', () => {
           expect(this.obj.size).to.equal(i);
         }
       });
+
     });
 
-    describe('extracting', () => {
+    describe('extracting', function() {
+
       it('can extract first in order after add first', function() {
         let i;
 
@@ -89,6 +97,7 @@ describe('SingleLinkedList class', () => {
           expect(this.obj.size).to.equal(10 - i);
         }
       });
+
     });
 
     it('can add items to front and back and extract first in order', function() {
@@ -108,9 +117,11 @@ describe('SingleLinkedList class', () => {
         expect(this.obj.size).to.equal(10 - i);
       }
     });
+
   });
 
-  describe('performance', () => {
+  describe('performance', function() {
+
     it('add first and extract 10000 items', function() {
       let list = new SingleLinkedList(),
         i;
@@ -122,7 +133,8 @@ describe('SingleLinkedList class', () => {
       for (i = 10000; i > 0; --i) {
         expect(list.extractFirst()).to.equal(i);
       }
-    })
+    });
+
   });
 
 });

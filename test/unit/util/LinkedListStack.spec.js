@@ -1,16 +1,19 @@
 import { expect } from 'chai';
 import LinkedListStack from '../../../src/util/LinkedListStack';
 
-describe('LinkedListStack class', () => {
+describe('LinkedListStack class', function() {
 
-  describe('instantiation', () => {
+  describe('instantiation', function() {
+
     it('works with no arguments', function() {
       let obj = new LinkedListStack();
       expect(obj.first).to.be.undefined;
     });
+
   });
 
-  describe('property constraints', () => {
+  describe('property constraints', function() {
+
     beforeEach(function() {
       this.obj = new LinkedListStack();
     });
@@ -18,9 +21,11 @@ describe('LinkedListStack class', () => {
     it('cannot set size', function() {
       expect(() => this.obj.size = null).to.throw(TypeError);
     });
+
   });
 
-  describe('functionality', () => {
+  describe('functionality', function() {
+
     beforeEach(function() {
       this.obj = new LinkedListStack();
     });
@@ -43,10 +48,11 @@ describe('LinkedListStack class', () => {
         expect(this.obj.pop()).to.equal(value + i);
       }
     });
+
   });
 
-  describe('performance', () => {
-    
+  describe('performance', function() {
+
   });
 
 });

@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import Comparator from '../../../../src/util/comparators/Comparator';
 
-describe('Comparator class', () => {
+describe('Comparator class', function() {
 
-  describe('instantiation', () => {
+  describe('instantiation', function() {
 
     it('can be instantiated with  no arguments', function() {
       let obj = new Comparator();
@@ -16,7 +16,7 @@ describe('Comparator class', () => {
 
   });
 
-  describe('.instance', () => {
+  describe('.instance', function() {
 
     it('returns an instance of Comparator', function() {
       let obj = Comparator.instance;
@@ -32,7 +32,7 @@ describe('Comparator class', () => {
 
   });
 
-  describe('.compare', () => {
+  describe('.compare', function() {
 
     it('returns 0 when both numbers are the same', function() {
       for (let i = -200; i <= 200; i += 17) {
@@ -54,7 +54,7 @@ describe('Comparator class', () => {
 
   });
 
-  describe('.equals', () => {
+  describe('.equals', function() {
 
     it('returns true when both numbers are the same', function() {
       for (let i = -200; i <= 200; i += 17) {
@@ -71,7 +71,7 @@ describe('Comparator class', () => {
 
   });
 
-  describe('.lessThan', () => {
+  describe('.lessThan', function() {
 
     it('returns true when first number is smaller than second', function() {
       for (let i = -200; i <= 200; i += 17) {
@@ -88,7 +88,7 @@ describe('Comparator class', () => {
 
   });
 
-  describe('.greaterThan', () => {
+  describe('.greaterThan', function() {
 
     it('returns true when first number is larger than second', function() {
       for (let i = -200; i <= 200; i += 17) {
