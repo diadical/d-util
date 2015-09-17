@@ -53,6 +53,20 @@ describe('LinkedListStack class', function() {
 
   describe('performance', function() {
 
+    beforeEach(function() {
+      this.obj = new LinkedListStack();
+    });
+
+    it('add 100,000 items', function() {
+      for (let i = 0; i <= 100000; ++i) {
+        this.obj.push(i);
+      }
+
+      for (let i = 100000; i >= 0; --i) {
+        expect(this.obj.pop()).to.equal(i);
+      }
+    });
+
   });
 
 });
