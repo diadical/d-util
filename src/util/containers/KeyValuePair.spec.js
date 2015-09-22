@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import KeyValuePair from '../../../../src/util/containers/KeyValuePair';
+import KeyValuePair from './KeyValuePair';
 
 describe('KeyValuePair class', function() {
   let key = 'key',

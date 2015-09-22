@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import SingleLinkedListNode from '../../../../src/util/containers/SingleLinkedListNode';
+import SingleLinkedListNode from './SingleLinkedListNode';
 
 describe('SingleLinkedListNode class', () => {
   let value = 'value';

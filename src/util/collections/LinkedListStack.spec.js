@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import LinkedListStack from '../../../src/util/LinkedListStack';
+import LinkedListStack from './LinkedListStack';
 
 describe('LinkedListStack class', function() {
 

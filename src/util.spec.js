@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import util from '../../src/util';
+import util from './util';
 
 describe('util "namespace"', function() {
 

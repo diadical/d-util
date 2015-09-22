@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import LinkedListQueue from '../../../src/util/LinkedListQueue';
+import LinkedListQueue from './LinkedListQueue';
 
 describe('LinkedListQueue class', function() {
 

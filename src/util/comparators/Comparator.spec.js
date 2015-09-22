@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Comparator from '../../../../src/util/comparators/Comparator';
+import Comparator from './Comparator';
 
 describe('Comparator class', function() {
 

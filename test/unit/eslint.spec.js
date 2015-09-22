@@ -4,7 +4,8 @@ import lint from 'mocha-eslint';
 // Note: a seperate Mocha test will be run for each path and each file which
 // matches a glob pattern
 let paths = [
-  'src/**/*.js'
+  'src/**/*.js',
+  'test/**/*.js'
 ];
 
 // Specify style of output

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import SingleLinkedList from '../../../src/util/SingleLinkedList';
+import SingleLinkedList from './SingleLinkedList';
 
 describe('SingleLinkedList class', function() {
 

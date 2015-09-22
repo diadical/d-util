@@ -1,4 +1,4 @@
-import SingleLinkedListNode from './containers/SingleLinkedListNode';
+import SingleLinkedListNode from '../containers/SingleLinkedListNode';
 
 /**
  * Low level class for a singly linked list data structure.
