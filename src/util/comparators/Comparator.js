@@ -8,7 +8,10 @@ class Comparator {
    * @readonly
    */
   static get ascending() {
-    return ascendingInstance;
+    if (!this._ascendingInstance) {
+      this._ascendingInstance = new this(false);
+    }
+    return this._ascendingInstance;
   }
 
   /**
@@ -17,7 +20,10 @@ class Comparator {
   * @readonly
   */
   static get descending() {
-    return descendingInstance;
+    if (!this._descendingInstance) {
+      this._descendingInstance = new this(true);
+    }
+    return this._descendingInstance;
   }
 
   /**
@@ -92,8 +98,5 @@ class Comparator {
     return this.compare(value1, value2) === 1;
   }
 }
-
-var ascendingInstance = new Comparator(false),
-  descendingInstance = new Comparator(true);
 
 export default Comparator;
