@@ -8,7 +8,7 @@ class Comparator {
    * @readonly
    */
   static get ascending() {
-    if (!this._ascendingInstance) {
+    if (!this.hasOwnProperty('_ascendingInstance')) {
       this._ascendingInstance = new this(false);
     }
     return this._ascendingInstance;
@@ -20,7 +20,7 @@ class Comparator {
   * @readonly
   */
   static get descending() {
-    if (!this._descendingInstance) {
+    if (!this.hasOwnProperty('_descendingInstance')) {
       this._descendingInstance = new this(true);
     }
     return this._descendingInstance;
