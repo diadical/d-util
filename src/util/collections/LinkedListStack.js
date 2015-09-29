@@ -13,7 +13,7 @@ class LinkedListStack {
 
   /**
    * Adds a new value onto the end of the stack.
-   * @param value Value to add.
+   * @param {} value Value to add.
    */
   push(value) {
     this._list.addFirst(value);
@@ -21,7 +21,7 @@ class LinkedListStack {
 
   /**
    * Removes the value at the end of the stack and returns it.
-   * @return Value at the end of the stack.
+   * @return {} Value at the end of the stack.
    */
   pop() {
     return this._list.extractFirst();
@@ -29,7 +29,8 @@ class LinkedListStack {
 
   /**
    * A readonly property that returns the number of items in the stack.
-   * @return {number} Number of items in the stack.
+   * @member {Number}
+   * @readonly
    */
   get size() {
     return this._list.size;

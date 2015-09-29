@@ -15,7 +15,7 @@ class SingleLinkedList {
 
   /**
    * Adds a value to the head of the linked list.
-   * @param value Value to add.
+   * @param {} value Value to add.
    */
   addFirst(value) {
     let node = new SingleLinkedListNode(value);
@@ -31,7 +31,7 @@ class SingleLinkedList {
 
   /**
    * Adds a value to the tail of the linked list.
-   * @param value Value to add.
+   * @param {} value Value to add.
    */
   addLast(value) {
     if (this._root) {
@@ -47,7 +47,7 @@ class SingleLinkedList {
 
   /**
    * Property to peek at the value at the head of the linked list.
-   * @return Value at the head.
+   * @member {}
    */
   get first() {
     let value = undefined;
@@ -59,7 +59,7 @@ class SingleLinkedList {
 
   /**
    * Removes the head value from the linked list and sets the head to the second node and returns the removed value.
-   * @return Value that was at the head.
+   * @return {} Value that was at the head.
    */
   extractFirst() {
     let value = undefined;
@@ -72,8 +72,9 @@ class SingleLinkedList {
   }
 
   /**
-   * Property to get the length of the linked list.
-   * @return {number} Length of the linked list.
+   * A readonly property to get the length of the linked list.
+   * @member {Number}
+   * @readonly
    */
   get size() {
     return this._size;
