@@ -16,11 +16,11 @@ describe('KeyValuePair class', function() {
     });
 
     it('throws an error when no parameters supplied', function() {
-      expect(() => new KeyValuePair()).to.throw(Error);
+      expect(() => new KeyValuePair()).to.throw('key and value arguments are mandatory');
     });
 
     it('throws an error when no value parameter supplied', function() {
-      expect(() => new KeyValuePair(key)).to.throw(Error);
+      expect(() => new KeyValuePair(key)).to.throw('key and value arguments are mandatory');
     });
 
   });
@@ -31,7 +31,7 @@ describe('KeyValuePair class', function() {
       this.obj = new KeyValuePair(key, value);
     });
 
-    describe('.key', function() {
+    describe('#key', function() {
 
       it('can get', function() {
         expect(this.obj.key).to.equal(key);
@@ -43,7 +43,7 @@ describe('KeyValuePair class', function() {
 
     });
 
-    describe('.value', function() {
+    describe('#value', function() {
 
       it('can get', function() {
         expect(this.obj.value).to.equal(value);

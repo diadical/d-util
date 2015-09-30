@@ -1,5 +1,10 @@
-
+/**
+ * A singly linked list node implementation.
+ */
 class SingleLinkedListNode {
+  /**
+   * @param {} value The value of the node.
+   */
   constructor(value) {
     if (arguments.length === 0) {
       throw new Error('value argument is mandatory');
@@ -9,10 +14,19 @@ class SingleLinkedListNode {
     this._next = null;
   }
 
+  /**
+   * Property to get value.
+   * @member {}
+   * @readonly
+   */
   get value() {
     return this._value;
   }
 
+  /**
+   * Property to get or set the next node.
+   * @member {SingleLinkedListNode}
+   */
   get next() {
     return this._next;
   }
