@@ -6,7 +6,13 @@ var pkg = require('./package.json'),
   babel = require('broccoli-babel-transpiler');
 
 var appJs = funnel('src', {
-  include: ['**/*.js']
+  include: [
+    '**/*.js'
+  ],
+  exclude: [
+    '**/*.spec.js',
+    '**/*.test.js'
+  ]
 });
 appJs = babel(appJs, {
   modules: 'amd',
