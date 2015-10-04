@@ -38,8 +38,27 @@ class ArrayStack {
     return this._array.length;
   }
 
+  /**
+   * Clears all items from the stack and makes it empty.
+   */
   clear() {
     this._array = [];
+  }
+
+  /**
+   * Calls the passed in callback with each value/index pair in Stack.
+   * @param  {Function} cb Callback to call for each item in Stack.
+   * @example
+   * stack.forEach((value, index) => {
+   * 	// do something
+   * })
+   */
+  forEach(cb) {
+    for (let j = 0, i = this._array.length - 1; i >= 0 ; ++j, --i) {
+      if (cb(this._array[i], j) === true) {
+        break;
+      }
+    }
   }
 }
 

@@ -42,6 +42,25 @@ class LinkedListQueue {
   clear() {
     this._list.clear();
   }
+
+  /**
+   * Calls the passed in callback with each value/index pair in Queue.
+   * @param  {Function} cb Callback to call for each item in Queue.
+   * @example
+   * queue.forEach((value, index) => {
+   * 	// do something
+   * })
+   */
+  forEach(cb) {
+    let node = this._list.first,
+      i = 0;
+    while (node) {
+      if (cb(node.value, i++) === true) {
+        break;
+      }
+      node = node.next;
+    }
+  }
 }
 
 export default LinkedListQueue;
