@@ -1,7 +1,11 @@
-import KeyValuePair from './util/containers/KeyValuePair';
-import SingleLinkedListNode from './util/containers/SingleLinkedListNode';
+import ArrayQueue from './collections/ArrayQueue';
+import ArrayStack from './collections/ArrayStack';
+import LinkedListQueue from './collections/LinkedListQueue';
+import LinkedListStack from './collections/LinkedListStack';
 
 export default {
-  KeyValuePair,
-  SingleLinkedListNode
+  ArrayQueue,
+  ArrayStack,
+  LinkedListQueue,
+  LinkedListStack
 };
