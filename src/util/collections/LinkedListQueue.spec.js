@@ -2,7 +2,7 @@
 
 import { expect } from 'chai';
 import LinkedListQueue from './LinkedListQueue';
-import queueTestHelpers from './Queue.test.js';
+import queueTestHelpers from './Queue.test';
 
 describe('LinkedListQueue class', function() {
 

@@ -7,9 +7,18 @@ describe('util "namespace"', function() {
 
   describe('contains types', function() {
 
-    // it('#KeyValuePair', function() {
-    //   expect(util.KeyValuePair).to.exist;
-    // });
+    [
+      'ArrayQueue',
+      'ArrayStack',
+      'LinkedListQueue',
+      'LinkedListStack'
+    ].forEach(prop => {
+
+      it('#' + prop, function() {
+        expect(util[prop]).to.exist;
+      });
+
+    });
 
   });
 

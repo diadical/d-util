@@ -2,7 +2,7 @@
 
 import { expect } from 'chai';
 import ArrayQueue from './ArrayQueue';
-import queueTestHelpers from './Queue.test.js';
+import queueTestHelpers from './Queue.test';
 
 describe('ArrayQueue class', function() {
 
