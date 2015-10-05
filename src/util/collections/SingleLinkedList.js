@@ -8,7 +8,7 @@ class SingleLinkedList {
    * Default constructor takes no arguments.
    */
   constructor() {
-    this._root = null;
+    this._head = null;
     this._tail = null;
     this._size = 0;
   }
@@ -19,12 +19,12 @@ class SingleLinkedList {
    */
   addFirst(value) {
     let node = new SingleLinkedListNode(value);
-    node.next = this._root;
-    if (this._root) {
-      this._root = node;
+    node.next = this._head;
+    if (this._head) {
+      this._head = node;
     }
     else {
-      this._tail = this._root = node;
+      this._tail = this._head = node;
     }
     ++this._size;
   }
@@ -34,10 +34,9 @@ class SingleLinkedList {
    * @param {} value Value to add.
    */
   addLast(value) {
-    if (this._root) {
+    if (this._head) {
       let node = new SingleLinkedListNode(value);
-      this._tail.next = node;
-      this._tail = node;
+      this._tail = this._tail.next = node;
       ++this._size;
     }
     else {
@@ -51,8 +50,8 @@ class SingleLinkedList {
    */
   get first() {
     let value = undefined;
-    if (this._root) {
-      value = this._root.value;
+    if (this._head) {
+      value = this._head.value;
     }
     return value;
   }
@@ -63,9 +62,9 @@ class SingleLinkedList {
    */
   extractFirst() {
     let value = undefined;
-    if (this._root) {
-      value = this._root.value;
-      this._root = this._root.next;
+    if (this._head) {
+      value = this._head.value;
+      this._head = this._head.next;
     }
     --this._size;
     return value;
@@ -84,9 +83,27 @@ class SingleLinkedList {
    * Clears all items from the linked list and makes it empty.
    */
   clear() {
-    this._root = null;
-    this._tail = null;
+    this._head = this._tail = null;
     this._size = 0;
+  }
+
+  /**
+   * Calls the passed in callback with each value/index pair in list.
+   * @param  {Function} cb Callback to call for each item in list.
+   * @example
+   * llist.forEach((value, index) => {
+   * 	// do something
+   * })
+   */
+  forEach(cb) {
+    let node = this._head,
+      i = 0;
+    while (node) {
+      if (cb(node.value, i++) === true) {
+        break;
+      }
+      node = node.next;
+    }
   }
 }
 

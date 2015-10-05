@@ -52,14 +52,7 @@ class LinkedListQueue {
    * })
    */
   forEach(cb) {
-    let node = this._list.first,
-      i = 0;
-    while (node) {
-      if (cb(node.value, i++) === true) {
-        break;
-      }
-      node = node.next;
-    }
+    this._list.forEach(cb);
   }
 }
 
