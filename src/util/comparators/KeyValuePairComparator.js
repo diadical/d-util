@@ -6,6 +6,13 @@ import Comparator from './Comparator';
  */
 class KeyValuePairComparator extends Comparator {
   /**
+   * @param {Boolean} [descendingOrder=false] - Order of comparisons. Descending order if true otherwise ascending order.
+   */
+  constructor(descendingOrder) {
+    super(descendingOrder);
+  }
+
+  /**
    * Compares the keys of two KeyValuePair objects.
    * @param  {KeyValuePair} value1 The first key to compare.
    * @param  {KeyValuePair} value2 The second key to compare.
