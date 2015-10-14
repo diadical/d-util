@@ -1,5 +1,10 @@
 /**
  * Queue implementation with a dynamically sized array.
+ *
+ * Note that it may be better to use the in-built Array type as a array backed
+ * queue than this implementation. The performance cost of doing the array copying
+ * instead of the push and unshift operations that Array supports has not been
+ * compared. Array.unshift isn't fast but it may be faster than this implementation.
  */
 class ArrayQueue {
   /**
@@ -95,10 +100,12 @@ class ArrayQueue {
   }
 
   _shrinkArray() {
-    this._array = this._copyArray();
-    this._maxLength /= 2;
-    this._start = 0;
-    this._end = this._array.length;
+    if (this._maxLength > 8) {
+      this._array = this._copyArray();
+      this._maxLength /= 2;
+      this._start = 0;
+      this._end = this._array.length;
+    }
   }
 
 }
