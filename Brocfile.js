@@ -10,8 +10,8 @@ var appJs = funnel('src', {
     '**/*.js'
   ],
   exclude: [
-    '**/*.spec.js',
-    '**/*.test.js'
+    '**/*.spec.js', // unit tests
+    '**/*.test.js' // test helpers
   ]
 });
 appJs = babel(appJs, {
