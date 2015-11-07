@@ -30,7 +30,6 @@ export default {
 
           it('sorts small lists', function() {
             let list, expected;
-
             list = [2, 4, 6, 8, 10, 9, 7, 5, 3, 1];
             expected = list.slice(0);
             sorter.sort(list);
@@ -38,11 +37,34 @@ export default {
             expect(list).to.eql(expected);
           });
 
-          it('sorts large random lists', function() {
-            let list, expected, i;
+          it('sorts list already in ascending order', function() {
+            let list = [],
+              expected;
+            for (let i = 1000; i <= 2000; ++i) {
+              list.push(i);
+            }
+            expected = list.slice(0);
+            sorter.sort(list);
+            expected.sort((a, b) => comparator.compare(a, b));
+            expect(list).to.eql(expected);
+          });
 
-            list = [];
-            for (i = 0; i < 20000; ++i) {
+          it('sorts list already in desscending order', function() {
+            let list = [],
+              expected;
+            for (let i = 2000; i >= 1000; --i) {
+              list.push(i);
+            }
+            expected = list.slice(0);
+            sorter.sort(list);
+            expected.sort((a, b) => comparator.compare(a, b));
+            expect(list).to.eql(expected);
+          });
+
+          it('sorts large random lists', function() {
+            let list = [],
+              expected;
+            for (let i = 0; i < 20000; ++i) {
               list.push(Math.floor(Math.random() * 99999999));
             }
             expected = list.slice(0);

@@ -22,14 +22,6 @@ class InsertionSort extends AbstractSort {
     return list;
   }
 
-  _swap(list, x, y) {
-    if (x !== y) {
-      let temp = list[x];
-      list[x] = list[y];
-      list[y] = temp;
-    }
-  }
-
 }
 
 export default InsertionSort;

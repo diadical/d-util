@@ -34,6 +34,15 @@ class AbstractSort {
     // must be implemented in subclasses
     throw new Error('sort is not implemented!');
   }
+
+  // Utility methods common to many sort routines
+  _swap(list, x, y) {
+    if (x !== y) {
+      let temp = list[x];
+      list[x] = list[y];
+      list[y] = temp;
+    }
+  }
 }
 
 export default AbstractSort;
