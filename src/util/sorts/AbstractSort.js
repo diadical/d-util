@@ -2,17 +2,17 @@ import Comparator from '../comparators/Comparator';
 
 class AbstractSort {
   static get ascending() {
-    if (!this.hasOwnProperty('_instance')) {
-      this._instance = new this(Comparator.ascending);
+    if (!this.hasOwnProperty('_ascending')) {
+      this._ascending = new this(Comparator.ascending);
     }
-    return this._instance;
+    return this._ascending;
   }
 
   static get descending() {
-    if (!this.hasOwnProperty('_instance')) {
-      this._instance = new this(Comparator.descending);
+    if (!this.hasOwnProperty('_descending')) {
+      this._descending = new this(Comparator.descending);
     }
-    return this._instance;
+    return this._descending;
   }
 
   constructor(comparator) {
