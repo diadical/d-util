@@ -39,7 +39,7 @@ class AbstractSort {
    * Constructor for AbstractSort cannot be invoked directly, should only be
    * called by a subclass via super() in a subclass constructor.
    *
-   * @param  {Comparator} comparator The Comparator object to compare values with
+   * @param {Comparator} comparator The Comparator object to compare values with
    */
   constructor(comparator) {
     if (this.constructor === AbstractSort) {
@@ -67,9 +67,10 @@ class AbstractSort {
    * called and will simply throw an error. It is expected to be overloaded
    * by any implementing subclass.
    *
+   * @param  {Array} list Array to be sorted
    * @throws {Error} Will always throw an Error
    */
-  sort() { // (comparator, array)
+  sort() { // arguments = (list)
     // must be implemented in subclasses
     throw new Error('sort is not implemented!');
   }
