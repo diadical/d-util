@@ -7,5 +7,6 @@ import sortTestHelpers from './Sort.test';
 describe('InsertionSort class', function() {
 
   sortTestHelpers.functionality(InsertionSort);
+  sortTestHelpers.randomised(InsertionSort);
 
 });
