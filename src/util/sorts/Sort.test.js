@@ -73,47 +73,51 @@ export default {
 
   randomised(Sort) {
 
-    [
-      'ascending',
-      'descending'
-    ].forEach(prop => {
-      let sorter = Sort[prop],
-        comparator = sorter.comparator;
-
-      it('correctly sorts randomised list with many duplicates', function() {
-        let list = [],
-          expected;
-        for (let i = 0; i < 10000; ++i) {
-          // add values between 1 and 100.
-          list.push(Math.floor(Math.random() * 100) + 1);
-        }
-        expected = list.slice(0);
-        sorter.sort(list);
-        expected.sort((a, b) => comparator.compare(a, b));
-        expect(list).to.eql(expected);
-      });
+    describe('randomised tests', function() {
 
       [
-        1 << 8,
-        1 << 10,
-        1 << 12,
-        1 << 14,
-        1 << 16
-      ].forEach(len => {
+        'ascending',
+        'descending'
+      ].forEach(prop => {
+        let sorter = Sort[prop],
+          comparator = sorter.comparator;
 
-        it(`correctly sorts a random list of length ${len}`, function() {
-          // extend test timeout as some sorts take a while
-          this.timeout(10000);
-
+        it('correctly sorts randomised list with many duplicates', function() {
           let list = [],
             expected;
-          for (let i = 0; i < len; ++i) {
-            list.push(Math.floor(Math.random() * 99999999));
+          for (let i = 0; i < 10000; ++i) {
+            // add values between 1 and 100.
+            list.push(Math.floor(Math.random() * 100) + 1);
           }
           expected = list.slice(0);
           sorter.sort(list);
           expected.sort((a, b) => comparator.compare(a, b));
           expect(list).to.eql(expected);
+        });
+
+        [
+          1 << 8,
+          1 << 10,
+          1 << 12,
+          1 << 14,
+          1 << 16
+        ].forEach(len => {
+
+          it(`correctly sorts a random list of length ${len}`, function() {
+            // extend test timeout as some sorts take a while
+            this.timeout(10000);
+
+            let list = [],
+              expected;
+            for (let i = 0; i < len; ++i) {
+              list.push(Math.floor(Math.random() * 99999999));
+            }
+            expected = list.slice(0);
+            sorter.sort(list);
+            expected.sort((a, b) => comparator.compare(a, b));
+            expect(list).to.eql(expected);
+          });
+
         });
 
       });

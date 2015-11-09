@@ -97,6 +97,17 @@ class Comparator {
   greaterThan(value1, value2) {
     return this.compare(value1, value2) === 1;
   }
+
+  /**
+   * Creates a new comparator object that will compare in the reverse order of the
+   * current one.
+   *
+   * @return {Comparator} New comparator object that compares in the reverse
+   * of the current instance.
+   */
+  reverseOrder() {
+    return new this.constructor(!this._descendingOrder);
+  }
 }
 
 export default Comparator;
