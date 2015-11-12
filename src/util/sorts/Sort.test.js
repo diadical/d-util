@@ -71,7 +71,7 @@ export default {
 
   },
 
-  randomised(Sort) {
+  randomised(Sort, doLargeTests) {
 
     describe('randomised tests', function() {
 
@@ -95,13 +95,16 @@ export default {
           expect(list).to.eql(expected);
         });
 
-        [
+        var lengths = [
           1 << 8,
           1 << 10,
           1 << 12,
-          1 << 14,
-          1 << 16
-        ].forEach(len => {
+          1 << 14
+        ];
+        if (doLargeTests) {
+          lengths.push(1 << 16);
+        }
+        lengths.forEach(len => {
 
           it(`correctly sorts a random list of length ${len}`, function() {
             // extend test timeout as some sorts take a while

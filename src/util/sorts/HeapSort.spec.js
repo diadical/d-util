@@ -7,6 +7,6 @@ import sortTestHelpers from './Sort.test';
 describe('HeapSort class', function() {
 
   sortTestHelpers.functionality(HeapSort);
-  sortTestHelpers.randomised(HeapSort);
+  sortTestHelpers.randomised(HeapSort, true);
 
 });

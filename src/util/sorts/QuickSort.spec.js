@@ -7,6 +7,6 @@ import sortTestHelpers from './Sort.test';
 describe('QuickSort class', function() {
 
   sortTestHelpers.functionality(QuickSort);
-  sortTestHelpers.randomised(QuickSort);
+  sortTestHelpers.randomised(QuickSort, true);
 
 });
