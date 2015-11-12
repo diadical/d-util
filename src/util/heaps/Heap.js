@@ -8,7 +8,7 @@ class Heap {
    * @param {Comparator} comparator Comparator type to use for comparing items.
    * Must be Comparator of subclass of Comparator.
    */
-  constructor(comparator) {
+  constructor(comparator, array) {
     if (arguments.length === 0) {
       throw new Error('Heap: comparator is mandatory');
     }
@@ -16,7 +16,16 @@ class Heap {
       throw new Error('Heap: comparator must either be an instance of comparators.Comparator or extend it');
     }
 
-    this._array = [];
+    if (arguments.length > 1) {
+      if (!Array.isArray(array)) {
+        throw new Error('Heap: second argument passed in must be an Array');
+      }
+      this._array = array;
+      this._heapify();
+    }
+    else {
+      this._array = [];
+    }
     this._comparator = comparator;
   }
 
@@ -103,7 +112,7 @@ class Heap {
   }
 
   _getParent(idx) {
-    return idx > 0 ? Math.floor((idx - 1)/ 2) : null;
+    return idx > 0 ? Math.floor((idx - 1) / 2) : null;
   }
 
   _getLeftChild(idx) {
@@ -148,6 +157,15 @@ class Heap {
       }
     }
   }
+
+  _heapify() {
+    // find the parent of the last item in the array
+    let idx = this._getParent(this._array.length - 1);
+    for (; idx >= 0; --idx) {
+      this.siftDown(idx);
+    }
+  }
+
 }
 
 export default Heap;
